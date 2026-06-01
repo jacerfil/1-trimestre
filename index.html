@@ -1,69 +1,195 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agrinho 2026 - Conectando Campo e Cidade</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* Configurações Globais / Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <h2>Agrinho <span>2026</span></h2>
-            </div>
-            <nav>
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#sobre">O Projeto</a></li>
-                    <li><a href="#importancia">Importância do Agro</a></li>
-                    <li><a href="#sustentabilidade">Sustentabilidade</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-                <div class="menu-toggle" id="mobileMenu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-            </nav>
-        </div>
-    </header>
+body {
+    background-color: #f4f4f9;
+    color: #333;
+}
 
-    <section id="inicio" class="hero">
-        <div class="hero-content">
-            <h1>Alimentando o Futuro com Sustentabilidade</h1>
-            <p>Descubra como o Agronegócio une tecnologia, respeito à natureza e inovação para mover o nosso país.</p>
-            <a href="#sobre" class="btn">Saber Mais</a>
-        </div>
-    </section>
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
-    <section id="sobre" class="py-5">
-        <div class="container">
-            <h2 class="section-title">O Projeto Agrinho</h2>
-            <div class="grid-2">
-                <div>
-                    <p>O <strong>Programa Agrinho</strong> é a maior iniciativa de responsabilidade social do Sistema FAEP/SENAR-PR. Há anos ele leva conhecimento, cidadania e consciência ambiental para milhares de crianças e jovens nas escolas.</p>
-                    <p>Em 2026, nosso foco está em mostrar como a tecnologia e a preservação ambiental caminham juntas no campo para garantir a segurança alimentar do planeta.</p>
-                </div>
-                <div class="card-destaque">
-                    <h3>Missão Agrinho 2026</h3>
-                    <p>"Incentivar o aprendizado prático sobre o campo, promovendo hábitos saudáveis, inovação tecnológica e a conservação do nosso solo e da nossa água."</p>
-                </div>
-            </div>
-        </div>
-    </section>
+/* Navbar / Topo */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 
-    <section id="importancia" class="bg-light py-5">
-        <div class="container">
-            <h2 class="section-title">A Força do Nosso Agro</h2>
-            <div class="grid-3">
-                <div class="card">
-                    <div class="icon">🌾</div>
-                    <h3>Alimentação</h3>
-                    <p>Mais do que commodities, o agro produz a comida que chega todos os dias na mesa das famílias brasileiras e do mundo.</p>
-                </div>
-                <div class="card">
-                    <div class="icon">🚜</div>
-                    <h3>Tecnologia</h3>
-                    <p>Drones, GPS
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2b6cb0;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a:hover {
+    color: #2b6cb0;
+}
+
+.carrinho {
+    font-weight: 600;
+    background-color: #e2e8f0;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Banner Principal */
+.banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=1200') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.banner-content h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.banner-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.btn-banner {
+    background-color: #2b6cb0;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-banner:hover {
+    background-color: #1a4975;
+}
+
+/* Vitrine de Produtos */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+/* Grid Responsivo para os cards */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* Card do Produto */
+.product-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product-info {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.product-info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #4a5568;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2b6cb0;
+    margin-bottom: 15px;
+}
+
+.btn-buy {
+    background-color: #319795;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.btn-buy:hover {
+    background-color: #234e52;
+}
+
+/* Rodapé */
+footer {
+    background-color: #2d3748;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+/* Ajustes para telas menores (Celulares) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .nav-links {
+        margin-bottom: 10px;
+    }
+    .banner-content h2 {
+        font-size: 30px;
+    }
+}
