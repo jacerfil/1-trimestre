@@ -1,30 +1,112 @@
+/site-esportes
+│
+├── index.html
+├── style.css
+└── script.js
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Global Sports News</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Sports News</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<style>
+<header>
+    <div class="logo">
+        <h1>🌎 Global Sports News</h1>
+    </div>
+
+    <nav>
+        <a href="#">Futebol</a>
+        <a href="#">Basquete</a>
+        <a href="#">Tênis</a>
+        <a href="#">F1</a>
+        <a href="#">Olimpíadas</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <h2>Notícias esportivas do mundo inteiro</h2>
+        <p>Acompanhe os principais eventos esportivos globais.</p>
+    </div>
+</section>
+
+<main class="container">
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Pesquisar notícias...">
+    </div>
+
+    <section class="news-grid">
+
+        <article class="news-card">
+            <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800" alt="">
+            <div class="content">
+                <span>Futebol</span>
+                <h3>Champions League tem rodada histórica</h3>
+                <p>Clubes europeus protagonizam grandes jogos.</p>
+            </div>
+        </article>
+
+        <article class="news-card">
+            <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=800" alt="">
+            <div class="content">
+                <span>Basquete</span>
+                <h3>NBA registra recorde de audiência</h3>
+                <p>Temporada alcança números impressionantes.</p>
+            </div>
+        </article>
+
+        <article class="news-card">
+            <img src="https://images.unsplash.com/photo-1622279457486-28f3c2c1c2e0?w=800" alt="">
+            <div class="content">
+                <span>Tênis</span>
+                <h3>Jovem talento vence torneio internacional</h3>
+                <p>Nova promessa chama atenção do mundo.</p>
+            </div>
+        </article>
+
+        <article class="news-card">
+            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800" alt="">
+            <div class="content">
+                <span>Fórmula 1</span>
+                <h3>Disputa pelo campeonato fica mais acirrada</h3>
+                <p>Pilotos chegam empatados para próxima etapa.</p>
+            </div>
+        </article>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 Global Sports News</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
     background:#f4f4f4;
-    color:#222;
 }
 
 header{
-    background:#0b1f3a;
+    background:#081f4d;
     color:white;
     padding:20px;
 }
 
-header h1{
+.logo{
     text-align:center;
 }
 
@@ -38,19 +120,24 @@ nav a{
     text-decoration:none;
     margin:0 15px;
     font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#00d4ff;
 }
 
 .hero{
-    background:url('https://images.unsplash.com/photo-1517649763962-0c623066013b?w=1200')
-    center/cover;
     height:400px;
+    background:url("https://images.unsplash.com/photo-1517649763962-0c623066013b?w=1600")
+    center/cover;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
 }
 
-.hero-content{
-    background:rgba(0,0,0,0.7);
+.hero-text{
+    background:rgba(0,0,0,.7);
     color:white;
     padding:30px;
     border-radius:10px;
@@ -61,192 +148,124 @@ nav a{
     width:90%;
     max-width:1200px;
     margin:auto;
-    padding:30px 0;
+    padding:40px 0;
 }
 
-.section-title{
-    margin-bottom:20px;
-    color:#0b1f3a;
+.search-box{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.search-box input{
+    width:100%;
+    max-width:500px;
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #ccc;
 }
 
 .news-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:20px;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
 }
 
-.card{
+.news-card{
     background:white;
-    border-radius:10px;
+    border-radius:12px;
     overflow:hidden;
-    box-shadow:0 3px 10px rgba(0,0,0,0.1);
-    transition:0.3s;
+    box-shadow:0 4px 12px rgba(0,0,0,.1);
+    transition:.3s;
 }
 
-.card:hover{
-    transform:translateY(-5px);
+.news-card:hover{
+    transform:translateY(-8px);
 }
 
-.card img{
+.news-card img{
     width:100%;
     height:220px;
     object-fit:cover;
 }
 
-.card-content{
+.content{
     padding:15px;
 }
 
-.card-content h3{
-    margin-bottom:10px;
-}
-
-.card-content p{
-    color:#555;
-}
-
-.category{
+.content span{
     display:inline-block;
-    background:#0b1f3a;
+    background:#081f4d;
     color:white;
     padding:5px 10px;
     border-radius:20px;
+    margin-bottom:10px;
     font-size:12px;
+}
+
+.content h3{
     margin-bottom:10px;
 }
 
+.content p{
+    color:#666;
+}
+
 footer{
-    background:#0b1f3a;
+    background:#081f4d;
     color:white;
     text-align:center;
     padding:20px;
-    margin-top:30px;
+    margin-top:40px;
 }
 
-.search{
-    margin:20px 0;
-    text-align:center;
+@media(max-width:768px){
+
+    nav a{
+        display:block;
+        margin:10px 0;
+    }
+
+    .hero{
+        height:300px;
+    }
+
 }
+const searchInput = document.getElementById("searchInput");
+const newsCards = document.querySelectorAll(".news-card");
 
-.search input{
-    width:100%;
-    max-width:500px;
-    padding:12px;
-    border:1px solid #ccc;
-    border-radius:8px;
-}
-</style>
-</head>
-<body>
+searchInput.addEventListener("keyup", () => {
 
-<header>
-    <h1>🌎 Global Sports News</h1>
-    <nav>
-        <a href="#">Futebol</a>
-        <a href="#">Basquete</a>
-        <a href="#">Tênis</a>
-        <a href="#">Fórmula 1</a>
-        <a href="#">Olimpíadas</a>
-    </nav>
-</header>
+    const value = searchInput.value.toLowerCase();
 
-<section class="hero">
-    <div class="hero-content">
-        <h2>As principais notícias esportivas do mundo</h2>
-        <p>Atualizações globais em tempo real</p>
-    </div>
-</section>
+    newsCards.forEach(card => {
 
-<div class="container">
-
-    <div class="search">
-        <input type="text" id="search" placeholder="Pesquisar notícias...">
-    </div>
-
-    <h2 class="section-title">Últimas Notícias</h2>
-
-    <div class="news-grid" id="newsGrid">
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800">
-            <div class="card-content">
-                <span class="category">Futebol</span>
-                <h3>Champions League tem rodada histórica</h3>
-                <p>Grandes clubes europeus protagonizam confrontos emocionantes.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=800">
-            <div class="card-content">
-                <span class="category">Basquete</span>
-                <h3>NBA registra recorde de audiência</h3>
-                <p>A temporada atual bate números históricos de espectadores.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1622279457486-28f3c2c1c2e0?w=800">
-            <div class="card-content">
-                <span class="category">Tênis</span>
-                <h3>Nova estrela conquista torneio internacional</h3>
-                <p>Jovem atleta surpreende e vence competição importante.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800">
-            <div class="card-content">
-                <span class="category">F1</span>
-                <h3>Disputa pelo título esquenta</h3>
-                <p>Pilotos chegam empatados para a próxima etapa.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800">
-            <div class="card-content">
-                <span class="category">Futebol Internacional</span>
-                <h3>Mercado de transferências movimenta clubes</h3>
-                <p>Negociações milionárias chamam atenção na Europa.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b?w=800">
-            <div class="card-content">
-                <span class="category">Olimpíadas</span>
-                <h3>Países anunciam novas equipes</h3>
-                <p>Preparação para os próximos jogos avança rapidamente.</p>
-            </div>
-        </div>
-
-    </div>
-
-</div>
-
-<footer>
-    <p>© 2026 Global Sports News - Todos os direitos reservados.</p>
-</footer>
-
-<script>
-const search = document.getElementById('search');
-const cards = document.querySelectorAll('.card');
-
-search.addEventListener('keyup', () => {
-    const term = search.value.toLowerCase();
-
-    cards.forEach(card => {
         const text = card.textContent.toLowerCase();
 
-        if(text.includes(term)){
+        if(text.includes(value)){
             card.style.display = "block";
-        } else {
+        }else{
             card.style.display = "none";
         }
-    });
-});
-</script>
 
-</body>
-</html>
+    });
+
+});
+
+
+// Exemplo de atualização automática
+
+const noticias = [
+    "Brasil vence amistoso internacional.",
+    "NBA anuncia calendário da próxima temporada.",
+    "Nova contratação movimenta mercado europeu.",
+    "Grande prêmio promete disputa emocionante."
+];
+
+setInterval(() => {
+
+    const noticiaAleatoria =
+        noticias[Math.floor(Math.random() * noticias.length)];
+
+    console.log("Última notícia:", noticiaAleatoria);
+
+}, 5000);
