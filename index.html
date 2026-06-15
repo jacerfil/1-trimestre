@@ -103,4 +103,67 @@
         /* Botões de Reação (Likes) */
         .reactions {
             display: flex;
-            gap: 8
+            gap: 8px;
+            margin-top: 5px;
+        }
+
+        .btn-reaction {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 4px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .btn-reaction:hover {
+            background-color: #e5e5e5;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Meu blog tech</h1>
+        <p>Vou compartilhar conhecimentos sobre tecnologia e programação</p>
+    </header>
+
+    <main class="posts-container">
+        
+        <article class="post-card">
+            <div class="post-header">
+                <div class="post-icon">📘</div> 
+                <h2 class="post-title">Meu primeiro post</h2>
+            </div>
+            <p class="post-author">Por: Marcelo Paludetto</p>
+            <p class="post-excerpt">
+                Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia.
+            </p>
+            <div class="reactions">
+                <button class="btn-reaction">💖 0</button>
+                <button class="btn-reaction">👍 0</button>
+            </div>
+        </article>
+
+        <article class="post-card">
+            <div class="post-header">
+                <div class="post-icon">📘</div>
+                <h2 class="post-title">Meu primeiro post</h2>
+            </div>
+            <p class="post-author">Por: Marcelo Paludetto</p>
+            <p class="post-excerpt">
+                Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia.
+            </p>
+            <div class="reactions">
+                <button class="btn-reaction">💖 0</button>
+                <button class="btn-reaction">👍 0</button>
+            </div>
+        </article>
+
+    </main>
+
+</body>
+</html>
