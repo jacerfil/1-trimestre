@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Blog Tech</title>
+    <style>
+        /* Configurações Gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 50px;
+        }
+
+        /* Header (Cabeçalho azul) */
+        .header {
+            background-color: #1a446c;
+            color: white;
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+            padding: 40px 20px;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-family: 'Georgia', serif;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        /* Container dos Posts */
+        .posts-container {
+            display: flex;
+            gap: 30px;
+            width: 100%;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        /* Cada Card de Post */
+        .post-card {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        /* Linha do título com o ícone */
+        .post-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .post-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #e0f2fe; /* Cor de fundo provisória para o ícone */
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .post-title {
+            color: #1a446c;
+            font-family: 'Georgia', serif;
+            font-size: 1.4rem;
+            line-height: 1.2;
+        }
+
+        /* Autor e Conteúdo */
+        .post-author {
+            font-weight: bold;
+            color: #444;
+            font-size: 0.95rem;
+        }
+
+        .post-excerpt {
+            color: #555;
+            line-height: 1.5;
+            font-size: 0.95rem;
+        }
+
+        /* Botões de Reação (Likes) */
+        .reactions {
+            display: flex;
+            gap: 8
