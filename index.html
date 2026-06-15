@@ -1,267 +1,154 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Global Sports News</title>
+    <title>Futebol Brasileiro</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <div class="logo">
-        <h1>🌎 Global Sports News</h1>
-    </div>
+    <header>
+        <h1>Paixão Nacional: Futebol Brasileiro</h1>
+        <p>Acompanhe a história, os clubes e a magia do nosso futebol.</p>
+    </header>
 
-    <nav>
-        <a href="#">Futebol</a>
-        <a href="#">Basquete</a>
-        <a href="#">Tênis</a>
-        <a href="#">F1</a>
-        <a href="#">Olimpíadas</a>
-    </nav>
-</header>
+    <main>
+        <section class="card">
+            <h2>A Seleção Canarinho</h2>
+            <p>O Brasil é a única seleção pentacampeã do mundo (1958, 1962, 1970, 1994 e 2002) e o país que moldou o "Joga Bonito".</p>
+            <button id="btn-selecao">Ver Anos dos Títulos</button>
+            <p id="texto-selecao" class="escondido">1958 • 1962 • 1970 • 1994 • 2002 🏆</p>
+        </section>
 
-<section class="hero">
-    <div class="hero-text">
-        <h2>Notícias esportivas do mundo inteiro</h2>
-        <p>Acompanhe os principais eventos esportivos globais.</p>
-    </div>
-</section>
+        <section class="card">
+            <h2>Curiosidade do Dia</h2>
+            <p id="curiosidade-texto">Clique no botão abaixo para descobrir um fato marcante do nosso futebol!</p>
+            <button id="btn-curiosidade">Próxima Curiosidade</button>
+        </section>
+    </main>
 
-<main class="container">
+    <footer>
+        <p>&copy; 2026 - O Altar do Futebol Brasileiro</p>
+    </footer>
 
-    <div class="search-box">
-        <input type="text" id="searchInput" placeholder="Pesquisar notícias...">
-    </div>
-
-    <section class="news-grid">
-
-        <article class="news-card">
-            <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=800" alt="">
-            <div class="content">
-                <span>Futebol</span>
-                <h3>Champions League tem rodada histórica</h3>
-                <p>Clubes europeus protagonizam grandes jogos.</p>
-            </div>
-        </article>
-
-        <article class="news-card">
-            <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?w=800" alt="">
-            <div class="content">
-                <span>Basquete</span>
-                <h3>NBA registra recorde de audiência</h3>
-                <p>Temporada alcança números impressionantes.</p>
-            </div>
-        </article>
-
-        <article class="news-card">
-            <img src="https://images.unsplash.com/photo-1622279457486-28f3c2c1c2e0?w=800" alt="">
-            <div class="content">
-                <span>Tênis</span>
-                <h3>Jovem talento vence torneio internacional</h3>
-                <p>Nova promessa chama atenção do mundo.</p>
-            </div>
-        </article>
-
-        <article class="news-card">
-            <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800" alt="">
-            <div class="content">
-                <span>Fórmula 1</span>
-                <h3>Disputa pelo campeonato fica mais acirrada</h3>
-                <p>Pilotos chegam empatados para próxima etapa.</p>
-            </div>
-        </article>
-
-    </section>
-
-</main>
-
-<footer>
-    <p>© 2026 Global Sports News</p>
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+/* Configurações Gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-body{
-    background:#f4f4f4;
+/* Cabeçalho */
+header {
+    background: linear-gradient(135deg, #009c3b, #ffdf00);
+    color: #002776;
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-header{
-    background:#081f4d;
-    color:white;
-    padding:20px;
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
 }
 
-.logo{
-    text-align:center;
+/* Conteúdo Principal */
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
-nav{
-    margin-top:15px;
-    text-align:center;
+/* Cartões de Conteúdo */
+.card {
+    background-color: #fff;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-left: 5px solid #009c3b;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 15px;
-    font-weight:bold;
-    transition:.3s;
+.card h2 {
+    color: #002776;
+    margin-top: 0;
 }
 
-nav a:hover{
-    color:#00d4ff;
+/* Botões */
+button {
+    background-color: #002776;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
-.hero{
-    height:400px;
-    background:url("https://images.unsplash.com/photo-1517649763962-0c623066013b?w=1600")
-    center/cover;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+button:hover {
+    background-color: #001a4e;
 }
 
-.hero-text{
-    background:rgba(0,0,0,.7);
-    color:white;
-    padding:30px;
-    border-radius:10px;
-    text-align:center;
+/* Classes Utilitárias */
+.escondido {
+    display: none;
 }
 
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-    padding:40px 0;
+.mostrar {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #009c3b;
+    font-size: 1.2rem;
 }
 
-.search-box{
-    text-align:center;
-    margin-bottom:30px;
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9rem;
 }
-
-.search-box input{
-    width:100%;
-    max-width:500px;
-    padding:12px;
-    border-radius:8px;
-    border:1px solid #ccc;
-}
-
-.news-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-}
-
-.news-card{
-    background:white;
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow:0 4px 12px rgba(0,0,0,.1);
-    transition:.3s;
-}
-
-.news-card:hover{
-    transform:translateY(-8px);
-}
-
-.news-card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-}
-
-.content{
-    padding:15px;
-}
-
-.content span{
-    display:inline-block;
-    background:#081f4d;
-    color:white;
-    padding:5px 10px;
-    border-radius:20px;
-    margin-bottom:10px;
-    font-size:12px;
-}
-
-.content h3{
-    margin-bottom:10px;
-}
-
-.content p{
-    color:#666;
-}
-
-footer{
-    background:#081f4d;
-    color:white;
-    text-align:center;
-    padding:20px;
-    margin-top:40px;
-}
-
-@media(max-width:768px){
-
-    nav a{
-        display:block;
-        margin:10px 0;
-    }
-
-    .hero{
-        height:300px;
-    }
-
-}
-const searchInput = document.getElementById("searchInput");
-const newsCards = document.querySelectorAll(".news-card");
-
-searchInput.addEventListener("keyup", () => {
-
-    const value = searchInput.value.toLowerCase();
-
-    newsCards.forEach(card => {
-
-        const text = card.textContent.toLowerCase();
-
-        if(text.includes(value)){
-            card.style.display = "block";
-        }else{
-            card.style.display = "none";
-        }
-
-    });
-
-});
-
-
-// Exemplo de atualização automática
-
-const noticias = [
-    "Brasil vence amistoso internacional.",
-    "NBA anuncia calendário da próxima temporada.",
-    "Nova contratação movimenta mercado europeu.",
-    "Grande prêmio promete disputa emocionante."
+// Lista de curiosidades para o site
+const curiosidades = [
+    "O Rei Pelé é o jogador mais jovem a vencer uma Copa do Mundo, com apenas 17 anos em 1958.",
+    "O Brasileirão começou oficialmente em 1959 (Taça Brasil) e o primeiro campeão foi o Bahia.",
+    "O Maracanã já recebeu o maior público da história do futebol em 1950: quase 200 mil pessoas.",
+    "Marta é a maior artilheira da história das Copas do Mundo (entre homens e mulheres) com 17 gols."
 ];
 
-setInterval(() => {
+// Lógica do botão da Seleção (Mostrar/Esconder anos)
+const btnSelecao = document.getElementById('btn-selecao');
+const textoSelecao = document.getElementById('texto-selecao');
 
-    const noticiaAleatoria =
-        noticias[Math.floor(Math.random() * noticias.length)];
+btnSelecao.addEventListener('click', () => {
+    if (textoSelecao.classList.contains('escondido')) {
+        textoSelecao.classList.remove('escondido');
+        textoSelecao.classList.add('mostrar');
+        btnSelecao.textContent = 'Esconder Anos';
+    } else {
+        textoSelecao.classList.remove('mostrar');
+        textoSelecao.classList.add('escondido');
+        btnSelecao.textContent = 'Ver Anos dos Títulos';
+    }
+});
 
-    console.log("Última notícia:", noticiaAleatoria);
+// Lógica do botão de Curiosidades (Mudar o texto aleatoriamente)
+const btnCuriosidade = document.getElementById('btn-curiosidade');
+const textoCuriosidade = document.getElementById('curiosidade-texto');
 
-}, 5000);
+btnCuriosidade.addEventListener('click', () => {
+    const indiceAleatorio = Math.floor(Math.random() * curiosidades.length);
+    textoCuriosidade.textContent = curiosidades[indiceAleatorio];
+});
