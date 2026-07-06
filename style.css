@@ -1,17 +1,82 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Busca todos os botões que têm a classe 'btn-reaction'
-    const botoes = document.querySelectorAll('.btn-reaction');
+/* Configurações Gerais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fcfcfc;
+    color: #2b4c7e;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
 
-    botoes.forEach(botao => {
-        botao.addEventListener('click', function() {
-            // Busca o elemento do número dentro do botão que foi clicado
-            const contador = this.querySelector('.count');
-            
-            // Pega o número atual, transforma em número inteiro e soma 1
-            let quantidadeAtual = parseInt(contador.innerText, 10);
-            
-            // Atualiza o texto do botão com o novo valor
-            contador.innerText = quantidadeAtual + 1;
-        });
-    });
-});
+.blog-container {
+    max-width: 700px;
+    width: 100%;
+}
+
+/* Estrutura do Post */
+.post {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.post-icon {
+    font-size: 2.5rem;
+    min-width: 50px;
+    text-align: center;
+    user-select: none;
+}
+
+.post-content h2 {
+    font-size: 1.4rem;
+    color: #1a365d;
+    margin: 0 0 5px 0;
+}
+
+.post-author {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #4a5568;
+    margin: 0 0 12px 0;
+}
+
+.post-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #2d3748;
+    margin: 0 0 15px 0;
+}
+
+/* Botões de Like / Reação */
+.post-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-like {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #f0f4f8;
+    border: 1px solid #cbd5e0;
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    color: #333;
+}
+
+.btn-like:hover {
+    background-color: #e2e8f0;
+}
+
+.btn-like:active {
+    transform: scale(0.95);
+}
+
+.btn-like .count {
+    font-weight: bold;
+}
