@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Blog</title>
+    <style>
+        /* Configurações Gerais da Página */
+        body {
+            font-family: 'Times New Roman', Times, serif; /* Fonte serifada parecida com a da imagem */
+            background-color: #ffffff;
+            color: #333333;
+            margin: 40px;
+            padding: 0;
+        }
+
+        /* Container de cada Post */
+        .post-container {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 35px;
+            max-width: 800px;
+        }
+
+        /* Espaço para a imagem/ícone do lado esquerdo */
+        .post-icon {
+            font-size: 40px; /* Usando emojis grandes para simular os ícones */
+            margin-right: 20px;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        /* Conteúdo do Post (Textos) */
+        .post-content {
+            flex: 1;
+        }
+
+        /* Título do Post */
+        .post-title {
+            font-size: 22px;
+            font-weight: bold;
+            color: #0d3b66; /* Tom de azul escuro idêntico ao da foto */
+            margin: 0 0 8px 0;
+        }
+
+        /* Autor do Post */
+        .post-author {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333333;
+            margin: 0 0 12px 0;
+        }
+
+        /* Texto/Descrição do Post */
+        .post-text {
+            font-size: 15px;
+            line-height: 1.4;
+            color: #444444;
+            margin: 0 0 15px 0;
+        }
+
+        /* Container dos Botões de Reação */
+        .reaction-container {
+            display: flex;
+            gap: 10px;
+        }
+
+        /* Botão de Reação individual */
+        .reaction-button {
+            display: flex;
+            align-items: center;
+            background-color: #f0f0f0;
+            border: 1px solid #cccccc;
+            padding: 2px 8px;
+            border-radius: 3px;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .reaction-button:hover {
+            background-color: #e5e5e5;
+        }
+
+        /* Ícone dentro do botão */
+        .reaction-icon {
+            margin-right: 6px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="post-container">
+        <div class="post-icon">📖</div>
+        <div class="post-content">
+            <h2 class="post-title">Meu primeiro post</h2>
+            <p class="post-author">Por: Marcelo Paludetto</p>
+            <p class="post-text">Boas-vindas ao meu novo blog! Aqui vou compartilhar dicas de programação e curiosidades da área de tecnologia.</p>
+            <div class="reaction-container">
+                <button class="reaction-button"><span class="reaction-icon">❤️</span> 0</button>
+                <button class="reaction-button"><span class="reaction-icon">🔥</span> 0</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-container">
+        <div class="post-icon">🌐</div>
+        <div class="post-content">
+            <h2 class="post-title">A quantidade de dados no mundo é surreal</h2>
+            <p class="post-author">Por: Marcelo Paludetto</p>
+            <p class="post-text">Estima-se que 90% de todos os dados existentes no mundo hoje foram gerados apenas nos últimos dois anos. Vivemos em uma verdadeira explosão de informação que não para de acelerar.</p>
+            <div class="reaction-container">
+                <button class="reaction-button"><span class="reaction-icon">❤️</span> 0</button>
+                <button class="reaction-button"><span class="reaction-icon">🔥</span> 0</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-container">
+        <div class="post-icon">📦</div>
+        <div class="post-content">
+            <h2 class="post-title">O primeiro mouse não era de plástico</h2>
+            <p class="post-author">Por: Giulliana Cestari</p>
+            <p class="post-text">Antes do design ergonômico e das luzes RGB, o primeiro mouse do mundo foi construído em madeira! Criado por Douglas Engelbart em 1964, ele tinha o formato de uma caixa quadrada e apenas um botão.</p>
+            <div class="reaction-container">
+                <button class="reaction-button"><span class="reaction-icon">❤️</span> 0</button>
+                <button class="reaction-button"><span class="reaction-icon">🔥</span> 0</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-container">
+        <div class="post-icon">👄</div>
+        <div class="post-content">
+            <h2 class="post-title">Por que o Bluetooth se chama assim?</h2>
+            <p class="post-author">Por: Giulliana Cestari</p>
+            <p class="post-text">O nome é uma homenagem ao rei viking Harald Blatand Gormsson, que unificou tribos da Escandinávia. Seu apelido era Harald "Bluetooth" porque seus dentes eram tão podres que tinham uma coloração azul escura.</p>
+            <div class="reaction-container">
+                <button class="reaction-button"><span class="reaction-icon">❤️</span> 0</button>
+                <button class="reaction-button"><span class="reaction-icon">🔥</span> 0</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
